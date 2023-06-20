@@ -1,0 +1,2 @@
+for react broser docs
+- https://reactrouter.com/en/main/routers/create-browser-router
