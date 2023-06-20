@@ -5,8 +5,8 @@ import {
 } from 'react-router-dom';
 
 import Root from './routes/Root';
-import Test1 from './routes/Test1';
-import Test2 from './routes/Test2';
+import Cooking from './routes/Cooking';
+import Gaming from './routes/Gaming';
 import Header from './globalComponents/Header';
 import Footer from './globalComponents/Footer';
 
@@ -16,16 +16,15 @@ function App() {
       path: '/',
       element: <Root/>,
       children: [
-
       ]
     },
     {
-      path: '/Test1',
-      element: <Test1/>,
+      path: '/Cooking',
+      element: <Cooking/>,
     },
     {
-      path: '/Test2',
-      element: <Test2/>,
+      path: '/Gaming',
+      element: <Gaming/>,
     },
   ]);
 

@@ -1,14 +1,14 @@
 import React from 'react';
 
 
-function Test1 () {
+function Cooking () {
 
   return(
     <>
       <h1>Hello World</h1>  
-      <h2>This is Test1</h2>
+      <h2>This is Cooking</h2>
     </>
   )
 }
 
-export default Test1;
+export default Cooking;
