@@ -7,6 +7,8 @@ import {
 import Root from './routes/Root';
 import Test1 from './routes/Test1';
 import Test2 from './routes/Test2';
+import Header from './globalComponents/Header';
+import Footer from './globalComponents/Footer';
 
 function App() {
   const router = createBrowserRouter([
@@ -29,7 +31,9 @@ function App() {
 
   return (
     <>
+      <Header/>
       <RouterProvider router={router}/>
+      <Footer/>
     </>
   );
 }
