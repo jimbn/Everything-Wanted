@@ -1,38 +1,39 @@
 import * as React from 'react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from 'react-router-dom';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Root from './routes/Root';
 import Cooking from './routes/Cooking';
 import Gaming from './routes/Gaming';
-import Header from './globalComponents/Header';
-import Footer from './globalComponents/Footer';
+import Header from './components/globalComponents/Header';
+import Footer from './components/globalComponents/Footer';
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <Root/>,
-      children: [
-      ]
-    },
-    {
-      path: '/Cooking',
-      element: <Cooking/>,
-    },
-    {
-      path: '/Gaming',
-      element: <Gaming/>,
-    },
-  ]);
 
+
+  
   return (
     <>
-      <Header/>
-      <RouterProvider router={router}/>
-      <Footer/>
+      <Router>
+        <div>
+          <Header/>
+            <div>
+              <Routes>
+                <Route 
+                  path ='/' 
+                   element={<Root/>}
+                />
+                <Route 
+                  path ='/Cooking' 
+                  element={<Cooking/>}
+                />
+                <Route 
+                  path ='/Gaming' 
+                  element={<Gaming/>}
+                />
+              </Routes>
+            </div>
+          <Footer/>
+        </div>
+      </Router>
     </>
   );
 }
